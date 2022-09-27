@@ -1,0 +1,29 @@
+spring:
+  security:
+    oauth2:
+      client:
+        registration:
+          keycloak:
+            client_id: client1
+            client_secret: GbzzCITpQxWcoX008b4dOTuVKBpZCPNK
+            provider: keycloak
+            authorization-grant-type: authorization_code
+            redirect-uri: http://localhost:8070/
+            scope:
+             - openid
+             - profile
+             - roles
+        provider:
+          keycloak:
+            authorization-uri: http://localhost:8080/realms/realm1/protocol/openid-connect/auth
+            token-uri: http://localhost:8080/realms/realm1/protocol/openid-connect/token
+            user-info-uri: http://localhost:8080/realms/realm1/protocol/openid-connect/userinfo
+            user-name-attribute: preferred_username
+            jwk-set-uri: http://localhost:8080/realms/realm1/protocol/openid-connect/certs
+            issuer-uri: http://localhost:8080/realms/realm1
+      resourceserver:
+        jwt:
+          jwk-set-uri: http://localhost:8080/realms/realm1/protocol/openid-connect/certs
+
+server:
+  port: 8070
