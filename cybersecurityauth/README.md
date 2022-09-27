@@ -1,6 +1,6 @@
 This is a simple Oauth2 based Resource Server and client implementation for SpringbootX2 based Java Rest API.
 
-1) For this assignment I'm using Keycloak an Open Source Identity and Access Management Tool.
+1) For this assignment I'm using Keycloak which is an Open Source Identity and Access Management Tool.
 2) This is a Springboot 2.7.4 based application, and I'm utilizing property based autoconfiguration feature of Java
 3) The application itself will act as OAuth Client and Resource Server which communicate with Keycloak server using autoconfiguration and application.yml properties defining the Oauth2 endpoints.
 4) For utilizing Oauth2 Client and Resource Server capabilities I'm using below dependencies in build.gradle:
